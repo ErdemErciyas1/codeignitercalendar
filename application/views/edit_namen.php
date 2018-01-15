@@ -10,15 +10,15 @@
 
 <table>
 <tr>
-<td>Firstname :  </td>
+<td>Firstname:  </td>
 
 <td> <input type="text" name="firstname" value="<?php echo $_GET['name']; ?>"> </td>
 
 </tr>	
 
 <tr>
-<td>Datum : </td>
-<td> <input type="text" name="datum"> </td>
+<td>Date: </td>
+<td> <input type="text" name="datum" 
 </tr>	
 <tr> 
 <td>
@@ -30,6 +30,7 @@
 </table>
 
 </center>
+
 
 
 

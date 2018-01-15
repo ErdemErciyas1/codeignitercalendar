@@ -11,10 +11,16 @@ class namen_datum extends CI_Controller
 
 public function index()
 {	
-	//de calendar object wordt geladen 
+	//de calendar wordt geladen 
 	$this->load->view('edit_namen');
+	$this->load->model('HomeModel');
+		$data['records'] = $this->HomeModel->getData();
+
+		$this->load->view('HomeView' ,$data);
 
 }
+
+
 
 
       

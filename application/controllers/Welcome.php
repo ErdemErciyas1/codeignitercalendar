@@ -22,12 +22,32 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 
-
 		
+		}
 
 
 
-	}
+	
 
+	public function add_user()
+	{
 
-}
+        $firstname = $this->input->post('firstname');
+		$lastname = $this->input->post('lastname');
+		
+		$data = array('firstname'=>$firstname,'lastname'=>$lastname);
+
+		$this->load->model('Add_users');
+		
+		//als je de firstname en lastname invult zijn de gegevens opgeslagen in de database.
+		if($this->Add_users->add($data))
+		{
+
+			echo "Data Insert Successfully";
+		}
+		else 
+		{
+			echo "Data Not Inserted";
+		}
+	}	
+	}	
